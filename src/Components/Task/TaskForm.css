@@ -1,89 +1,50 @@
-
-
 .box_styling {
   min-height: 100vh;
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
   padding-top: 100px;
   padding-bottom: 40px;
-
   box-sizing: border-box;
 }
-
 
 .taskform_style {
   width: 500px;
   max-width: 90%;
-
   display: flex;
   flex-direction: column;
   align-items: stretch;
-
   gap: 20px;
-
   background: white;
-
   border: 1px solid #e5e7eb;
   border-radius: 20px;
-
   padding: 35px;
-
   box-sizing: border-box;
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.08),
-    0 2px 8px rgba(0, 0, 0, 0.05);
-
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
-
-
-
-
-.taskform_style:hover {
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.12),
-    0 4px 10px rgba(0, 0, 0, 0.06);
-}
-
-
 
 .taskform_style h3 {
   text-align: center;
-
   font-size: 30px;
   font-weight: 700;
-
   margin: 0 0 10px 0;
-
   color: #1f2937;
 }
 
-
 .form_name,
 .form_description {
-  width: 100% !important;
+  width: 100%;
 }
-
-
-
 
 .form_description .MuiInputBase-root {
   min-height: 100px;
   align-items: flex-start;
 }
 
-
 .taskform_style .MuiFormControl-root {
   width: 100%;
 }
-
-
-
 
 .taskform_style .MuiFormLabel-root {
   font-weight: 600;
@@ -91,130 +52,57 @@
   margin-bottom: 5px;
 }
 
-
 .taskform_style .MuiFormControlLabel-root {
   margin-right: 20px;
   color: #4b5563;
-
-  transition: all 0.2s ease;
 }
-
-.taskform_style .MuiFormControlLabel-root:hover {
-  color: #1976d2;
-}
-
 
 .form_button {
   display: flex;
-
   flex-direction: row;
-
   justify-content: center;
-
   gap: 15px;
-
   padding: 10px 0 0 0;
 }
 
-
-
 .form_button button {
   min-width: 130px;
-
   padding: 10px 22px;
-
   border-radius: 10px;
-
   font-weight: 600;
-
   text-transform: none;
-
-  transition: all 0.25s ease;
 }
-
-
 
 .form_button button[type="submit"] {
-  background: linear-gradient(
-    135deg,
-    #1976d2,
-    #7b1fa2
-  );
-
+  background: #1976d2;
   color: white;
-
-  box-shadow:
-    0 5px 15px rgba(25, 118, 210, 0.25);
+  border: none;
+  box-shadow: 0 4px 10px rgba(25, 118, 210, 0.2);
 }
-
-
-
-
-.form_button button[type="submit"]:hover {
-  background: linear-gradient(
-    135deg,
-    #1565c0,
-    #6a1b9a
-  );
-
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 8px 20px rgba(25, 118, 210, 0.35);
-}
-
-
-
 
 .form_button button:last-child {
   border: 1px solid #d1d5db;
-
   color: #4b5563;
-
   background: #f9fafb;
 }
 
-
-
-.form_button button:last-child:hover {
-  background: #f3f4f6;
-
-  color: #111827;
-
-  transform: translateY(-2px);
-}
-
-
-
-
-.form_button button:active {
-  transform: scale(0.96);
-}
-
-
 @media (max-width: 768px) {
-
   .box_styling {
     padding-top: 90px;
   }
 
   .taskform_style {
     width: 480px;
-
     padding: 30px;
-
     gap: 18px;
   }
 
   .taskform_style h3 {
     font-size: 26px;
   }
-
 }
 
-
 @media (max-width: 550px) {
-
   .box_styling {
     padding-top: 90px;
     padding-left: 15px;
@@ -224,11 +112,8 @@
   .taskform_style {
     width: 100%;
     max-width: 100%;
-
     padding: 25px 20px;
-
     border-radius: 16px;
-
     gap: 17px;
   }
 
@@ -238,21 +123,16 @@
 
   .form_button {
     width: 100%;
-
     flex-direction: column;
-
     gap: 10px;
   }
 
   .form_button button {
     width: 100%;
   }
-
 }
 
-
 @media (max-width: 380px) {
-
   .box_styling {
     padding-top: 85px;
     padding-left: 10px;
@@ -261,12 +141,10 @@
 
   .taskform_style {
     padding: 20px 15px;
-
     border-radius: 14px;
   }
 
   .taskform_style h3 {
     font-size: 20px;
   }
-
 }

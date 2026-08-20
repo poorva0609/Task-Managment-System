@@ -67,7 +67,7 @@ const Dashboard = () => {
   return (
     <> <Navbar />
     <Box className="dashboard_parent" >
-      <Typography variant="h4">My Tasks</Typography>
+      <Typography variant="h4">My Tasks </Typography>
       {console.log(taskData)}
       {taskData && taskData.map((task , index)=>{
       
