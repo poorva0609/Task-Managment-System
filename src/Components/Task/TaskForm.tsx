@@ -16,7 +16,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
-type taskDataArgs={
+export type taskDataArgs={
   title:string,
   description:string,
   status:string,
@@ -24,7 +24,7 @@ type taskDataArgs={
 }
 
 
-const tasks: taskDataArgs[] = JSON.parse(localStorage.getItem("tasks") || "{}")
+const tasks: taskDataArgs[] = JSON.parse(localStorage.getItem("tasks") || "[]")
 
 // to get the array elements from locastprage
 const TaskForm = () => {
@@ -60,7 +60,7 @@ const Navigate = useNavigate()
       return
      }
      tasks.push(taskData);
-
+     console.log("inside handlesubmit " , taskData)
      localStorage.setItem("tasks", JSON.stringify(tasks));
      Navigate("/")
   }

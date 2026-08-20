@@ -19,20 +19,20 @@ const Profile = () => {
   }
   
   return (
-    <>
+    <Box className="absolute_parent_profile">
     <Navbar />
     <Box className="profile_page">
       
       <Box className="inner-profile">
         
      <Box className='heading'>
-    <Typography variant='h3'>Welcome! {name}</Typography>
-      <Typography variant='h5'>{email}</Typography>
+    <Typography variant='h3' id="h3">Welcome! {name}</Typography>
+      <Typography variant='h5' id="h5">{email}</Typography>
     </Box>
 
 
     <Box className='name'>
-      <Typography variant="h5">
+      <Typography variant="h5" id="h5">
         Full Name
       </Typography>
 
@@ -42,7 +42,7 @@ const Profile = () => {
     </Box>
 
 <Box className='email'>
-      <Typography variant="h5">
+      <Typography variant="h5" id="h5">
         Email Address 
       </Typography>
 
@@ -52,8 +52,8 @@ const Profile = () => {
 </Box>
 
 <Box className='age'>
-      <Typography variant="h5">
-        Age {age}
+      <Typography variant="h5" id="h5">
+        Age
       </Typography>
 
       <Typography>
@@ -67,7 +67,7 @@ const Profile = () => {
       </Box>
 
     </Box>
-    </>
+    </Box>
   )
 }
 

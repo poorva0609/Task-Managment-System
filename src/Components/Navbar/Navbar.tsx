@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import {
-
+Box,
   Button,
   Typography,
 } from "@mui/material";
@@ -11,7 +11,8 @@ import {
 const Navbar = () => {
   const Navigate= useNavigate()
   return (
-    <div className="parent_Navbar">
+    <Box className="absolute_parent">
+    <Box className="parent_Navbar">
 
     <Typography variant="h5">
       Task Manager
@@ -24,7 +25,8 @@ const Navbar = () => {
     <Button onClick={()=>{
       Navigate("/Login")
     }}>LOG OUT</Button>
-    </div>
+    </Box>
+    </Box>
   )
 }
 

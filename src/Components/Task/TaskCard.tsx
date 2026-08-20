@@ -12,10 +12,11 @@ interface propData{
     status:string  ,
     priority:string
   },
-  onComplete:(title:string) => void
+  onComplete:(title:string) => void,
+  onDelete:(title:string) => void
 }
 
-const TaskCard = ({task , onComplete} : propData) => {
+const TaskCard = ({task , onComplete , onDelete} : propData) => {
 
   const {title , description , status  , priority} = task;
   
@@ -71,6 +72,14 @@ const TaskCard = ({task , onComplete} : propData) => {
         onClick={() => onComplete(title)}
       >
         COMPLETED
+      </Button>
+
+      <Button
+        className="complete_button"
+        variant="contained"
+        onClick={() => onDelete(title)}
+      >
+        DELETE
       </Button>
     </Box>
 
