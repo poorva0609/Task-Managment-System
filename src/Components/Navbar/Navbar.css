@@ -1,0 +1,8 @@
+.parent_Navbar{
+   display:flex;
+   justify-content: space-between;
+   border:2px solid white;
+    border-width:20px;
+    border-radius:1%;
+    box-shadow: 0 6px  15px rgba(0, 0, 0, 0.15);
+}
