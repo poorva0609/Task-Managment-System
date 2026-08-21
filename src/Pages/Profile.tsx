@@ -64,6 +64,7 @@ const Profile = () => {
  <Box className="profile_button">
       <button onClick={delItems}>DELETE</button>
 </Box>
+
       </Box>
 
     </Box>
