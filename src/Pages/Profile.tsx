@@ -5,8 +5,10 @@ import {
 import { useNavigate } from "react-router-dom";
 import './Profile.css'
 import Navbar from "../Components/Navbar/Navbar";
+import { useState } from 'react'
 
 const Profile = () => {
+  const [isEditing, setIsEditing] = useState(false);
 
   const {name , email , age} = JSON.parse(localStorage.getItem("auth") || "{}");
  
@@ -36,9 +38,13 @@ const Profile = () => {
         Full Name
       </Typography>
 
-      <Typography>
-        {name}
-      </Typography>
+       {isEditing ? (
+    <input type="text" defaultValue={name} />
+  ) : (
+    <Typography>
+      {name}
+    </Typography>
+  )}
     </Box>
 
 <Box className='email'>
@@ -46,9 +52,13 @@ const Profile = () => {
         Email Address 
       </Typography>
 
-      <Typography>
-        {email}
-      </Typography>
+       {isEditing ? (
+    <input type="text" defaultValue={email} />
+  ) : (
+    <Typography>
+      {email}
+    </Typography>
+  )}
 </Box>
 
 <Box className='age'>
@@ -56,12 +66,20 @@ const Profile = () => {
         Age
       </Typography>
 
-      <Typography>
-        {age}
-      </Typography>
+     {isEditing ? (
+    <input type="text" defaultValue={age} />
+  ) : (
+    <Typography>
+      {age}
+    </Typography>
+  )}
   </Box>
  
  <Box className="profile_button">
+  <button onClick={() => setIsEditing(true)}>
+    EDIT
+  </button>
+
       <button onClick={delItems}>DELETE</button>
 </Box>
 
