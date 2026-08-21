@@ -1,5 +1,4 @@
 
-
 export interface TaskData {
   title: string;
   description: string;
@@ -11,6 +10,6 @@ export interface UserData {
   name: string;
   email: string;
   password: string;
-confirmpassword: string;
-Age:string
+  confirmpassword: string;
+  age:string
 }
