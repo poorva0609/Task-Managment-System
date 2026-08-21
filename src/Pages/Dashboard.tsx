@@ -53,7 +53,7 @@ const Dashboard = () => {
     return updatedTasks;
 
     })}
-    console.log("1",taskData)
+    
 
 
 

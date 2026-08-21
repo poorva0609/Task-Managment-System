@@ -24,8 +24,6 @@ export type taskDataArgs={
 }
 
 
-const tasks: taskDataArgs[] = JSON.parse(localStorage.getItem("tasks") || "[]")
-
 // to get the array elements from locastprage
 const TaskForm = () => {
 const Navigate = useNavigate()
@@ -55,12 +53,14 @@ const Navigate = useNavigate()
   const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
      e.preventDefault();
      console.log(taskData)
+
      if(taskData.status ==="" || taskData.priority===""){
-      alert("select status and pending before adding a task")
+      alert("select status and priority before adding a task")
       return
      }
+    const tasks: taskDataArgs[] = JSON.parse(localStorage.getItem("tasks") || "[]")
      tasks.push(taskData);
-     console.log("inside handlesubmit " , taskData)
+     
      localStorage.setItem("tasks", JSON.stringify(tasks));
      Navigate("/")
   }
