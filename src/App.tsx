@@ -1,10 +1,13 @@
 import AppRoutes from './Routes'
+import {
+  Box
+} from "@mui/material";
 
 function App() {
   return (
-    <div>
+    <Box>
     <AppRoutes />
-    </div>
+    </Box>
   );
 }
 
